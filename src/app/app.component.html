@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+
+<input type="text" placeholder="HH:mm:ss" [(ngModel)]="time" />
+<input type="text" placeholder="-4" [(ngModel)]="timezone" />
+<button (click)="requestTime()">SOLICITAR</button>
+
+<section *ngIf="showTime">
+  <p>{{ timeResp }}</p>
+  <p>{{ timezoneResp }}</p>
+</section>
